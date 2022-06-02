@@ -167,10 +167,10 @@ class Show(db.Model):
         'Venue.id'), nullable=False)
     artist_id = db.Column(db.Integer, db.ForeignKey(
         'Artist.id'), nullable=False)
-    venue = db.relationship(
-        'Venue', backref=db.backref('venue_shows', cascade='all, delete'))
-    artist = db.relationship(
-        'Artist', backref=db.backref('artist_shows', cascade='all, delete'))
+    # venue = db.relationship(
+    #     'Venue', backref=db.backref('venue_shows', cascade='all, delete'))
+    # artist = db.relationship(
+    #     'Artist', backref=db.backref('artist_shows', cascade='all, delete'))
 
 
     def __repr__(self):
